@@ -7,12 +7,12 @@ var study = new Vue({
   methods: {
     smartTimer(){
       let timer =
-      setTimeout(tick => {
-        console.log('tick')
+      setTimeout(function tick() {
+        console.log(timer)
         
         timer = 
         setTimeout(tick, 2000)
-      }, 2000)
+      }.bind(this), 2000)
     }
   }
 });
