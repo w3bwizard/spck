@@ -1,12 +1,15 @@
 var study = new Vue({
   el: "#vue-app",
   data: {
-    heading: "Vue.js",
-    text: "Happiness makes up in height what it lacks in length."
+    heading: 
+    "Vue (\\/)_(o_O)_(\\/)"
   },
   methods: {
-    test() {
-      alert('qq')
+    smartTimer(){
+      const timer =
+      setTimeout(()=>{
+        console.log('timer msg')
+      }, 2000)
     }
   }
 });
