@@ -6,14 +6,19 @@ var study = new Vue({
     val: 0
   },
   methods: {
-    smartTimer() {
+    timer() {
       let i = 0
-      return () => {
+      return function() {
         return i += 1
       }
     },
     updateVal() {
-      this.val = this.smartTimer()
+      let z = this.timer()
+      update = () => {
+        console.log(this)
+        this.val = z()
+      }
+      update()
     }
   }
 });
