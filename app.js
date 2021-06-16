@@ -3,22 +3,21 @@ var study = new Vue({
   data: {
     heading: 
     "Vue (\\/)_(o_O)_(\\/)",
-    val: 0
+    timerWorking: false
   },
   methods: {
-    timer() {
-      let i = 0
-      return function() {
-        return i += 1
+  timer(){
+    if 
+    (this.timerWorking != true)
+    {
+    let looper =
+    setTimeout(loop = () => {
+      console.log('tick')
+      this.timerWorking = true
+      looper =
+        setTimeout(loop, 2000)
+      }, 2000)       
       }
     },
-    updateVal() {
-      let z = this.timer()
-      update = () => {
-        console.log(this)
-        this.val = z()
-      }
-      update()
-    }
   }
 });
