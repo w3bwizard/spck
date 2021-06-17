@@ -10,14 +10,24 @@ var study = new Vue({
     if 
     (this.timerWorking != true)
     {
-    let looper =
-    setTimeout(loop = () => {
+    loop = () => {
       console.log('tick')
       this.timerWorking = true
       looper =
         setTimeout(loop, 2000)
-      }, 2000)       
+    }
+    let looper =
+    setTimeout(loop, 0)       
       }
     },
+    pushState() {
+     const state = 
+     { 'page_id': 1, 'user_id': 5 }
+     const title = ''
+     const url = ''
+     
+     history.
+     pushState(state, title, url) 
+    }
   }
 });
