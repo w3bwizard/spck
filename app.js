@@ -3,31 +3,22 @@ var study = new Vue({
   data: {
     heading: 
     "Vue (\\/)_(o_O)_(\\/)",
-    timerWorking: false
+    timerWorking: false,
+    count: 0
   },
   methods: {
-  timer(){
-    if 
-    (this.timerWorking != true)
-    {
-    loop = () => {
-      console.log('tick')
-      this.timerWorking = true
-      looper =
-        setTimeout(loop, 2000)
-    }
-    let looper =
-    setTimeout(loop, 0)       
-      }
-    },
     pushState() {
+     this.count += 1
      const state = 
-     { 'page_id': 1, 'user_id': 5 }
+     { 'id': this.count}
      const title = ''
      const url = ''
      
      history.
-     pushState(state, title, url) 
+     pushState(state, title, url)
+    },
+    setState(id) {
+      count = id
     }
   }
 });
