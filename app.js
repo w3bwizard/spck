@@ -1,3 +1,5 @@
+//import {test} from 'api.js' 
+
 var study = new Vue({
   el: "#vue-app",
   data: {
@@ -13,7 +15,6 @@ var study = new Vue({
      { 'id': this.count}
      const title = ''
      const url = ''
-     
      history.
      pushState(state, title, url)
     },
