@@ -7,11 +7,10 @@ var study = new Vue({
     count: 0
   },
   created(){
-    window.onpopstate =
-      function(event) {
-        console.log(JSON.stringify(event.state))
-      }
-    console.log('qq')
+    window.onpopstate = 
+    function(event) {
+      this.count = event.state.id
+    }.bind(this)
   },
   methods: {
     pushState() {
@@ -23,8 +22,5 @@ var study = new Vue({
      history.
      pushState(state, title, url)
     },
-    setState(id) {
-      count = id
-    }
   }
 });
