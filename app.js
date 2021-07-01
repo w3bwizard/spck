@@ -1,5 +1,3 @@
-//import {test} from 'api.js' 
-
 var study = new Vue({
   el: "#vue-app",
   data: {
@@ -7,6 +5,13 @@ var study = new Vue({
     "Vue (\\/)_(o_O)_(\\/)",
     timerWorking: false,
     count: 0
+  },
+  created(){
+    window.onpopstate =
+      function(event) {
+        console.log(JSON.stringify(event.state))
+      }
+    console.log('qq')
   },
   methods: {
     pushState() {
