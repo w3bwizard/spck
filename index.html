@@ -23,11 +23,11 @@
       Test
     </button>
     <button 
-    @click="pushState"
+    @click="pushState(count += 1)"
     type="button">
       pushState
     </button>
-    <h2>{{ count }}</h2>
+    <h2 v-if="count != null">{{ count }}</h2>
   </div>
 </div>
   <!-- Project -->

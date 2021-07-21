@@ -1,22 +1,28 @@
+//в истории присутствует лишнее
+//изначальное состояние
+
 var study = new Vue({
   el: "#vue-app",
   data: {
     heading: 
     "Vue (\\/)_(o_O)_(\\/)",
     timerWorking: false,
-    count: 0
+    count: null
   },
   created(){
+    this.count = 0
+    this.pushState(this.count)
     window.onpopstate = 
-    function(event) {
+    (event) => {
       this.count = event.state.id
-    }.bind(this)
+    }
+    console.log
+    ('created', 'count', this.count)
   },
   methods: {
-    pushState() {
-     this.count += 1
+    pushState(count) {
      const state = 
-     { 'id': this.count}
+     { 'id': count}
      const title = ''
      const url = ''
      history.
